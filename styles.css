@@ -1,0 +1,77 @@
+:root {
+    --color-fondo-body: #000;
+    --color-texto-body: #fff;
+    --color-fondo-header: #333;
+    --color-texto-header: #fff;
+    --color-fondo-tabla: #000;
+    --color-texto-tabla: #fff;
+    --color-fondo-th: #222;
+    --color-texto-th: #ffffff; /* Naranja */
+    --color-fondo-tr-hover: #111;
+    --color-texto-celda1: #db3434; /* Azul */
+}
+
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo-body);
+    color: var(--color-texto-body);
+}
+
+header {
+    background-color: var(--color-fondo-header);
+    color: var(--color-texto-header);
+    text-align: center;
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-fondo-tabla);
+    color: var(--color-texto-tabla);
+    text-decoration: none; 
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    cursor: text;
+    max-height: 30px; /* Ajusta la altura máxima según tus necesidades */
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 20px;
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+}
+
+th {
+    background-color: var(--color-fondo-th);
+    color: var(--color-texto-th);
+}
+
+tr:hover {
+    background-color: var(--color-fondo-tr-hover);
+}
+
+.celda1 {
+    color: var(--color-texto-celda1);
+}
+
+td{
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    cursor: text;
+    max-height: 30px; /* Ajusta la altura máxima según tus necesidades */
+    overflow: hidden;
+    white-space: nowrap;
+}

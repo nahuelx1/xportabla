@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envíos Marítimos - Bolsa de Valores</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=DotGothic16&family=Silkscreen&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Envios Maritimos</h1>
+    </header>
+
+    <table border="1" id="miTabla">
+        <thead>
+            <tr>
+                <th>Compañía</th>
+                <th>Origen</th>
+                <th>Destino</th>
+                <th>Precio</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="celda1" contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">Compañía A</td>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">Ciudad A</td>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">Ciudad B</td>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">$1,200</td>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">En tránsito</td>
+            </tr>
+            <tr>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">Compañía B</td>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">Ciudad C</td>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">Ciudad D</td>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">$900</td>
+                <td contenteditable="true" oninput="cambiarContenido(this)" style="color: #fff;">Entregado</td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+        </tbody>
+    </table>
+
+    <script>
+        function cambiarContenido(celda) {
+            var nuevoContenido = prompt("Edita el contenido:", celda.innerText);
+            if (nuevoContenido !== null) {
+                celda.innerText = nuevoContenido;
+                var nuevoColor = prompt("Selecciona un nuevo color para el texto:", celda.style.color);
+                if (nuevoColor !== null) {
+                    celda.style.color = nuevoColor;
+                }
+            }
+        }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
+    <script src="config.js"></script> <!-- Configuración de Firebase -->
+    <script src="main.js"></script>   <!-- Lógica de la aplicación -->
+    
+
+</body>
+</html>
